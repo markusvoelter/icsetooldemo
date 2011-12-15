@@ -31,6 +31,8 @@ vaclav.pech@jetbrains.com}
 \newcommand{\ic}[1]{\changefont{cmtt}{m}{n}{#1}\normalfont}  % inline code
 \newcommand{\lcr}[1]{\changefont{cmtt}{m}{n}{#1}\normalfont} % language
 
+\newcommand{\pp}[1]{ \vspace{2mm}\noindent\textbf{{#1}} }
+
 
 % make the title area
 \maketitle
@@ -63,7 +65,7 @@ productive.
 Many software systems are composed from several concerns, each of them expressed
 with its own set of abstraction, possibly by different people, some of them may
 not even be programmers. So, to describe a real-world system, ideally several
-langauages are necessary.
+languages are necessary.
 
 Looking at software engineering in this light, an environment is needed in
 which language creation is easy, languages can be composed and the concrete
@@ -91,12 +93,26 @@ state machines and decision tables, each of them defined as a separate
 language. The screenshot also shows requirements traces (green annotations),
 which can be attached to any program element without the definition of this
 element being aware of the annotation.}
+\label{screenshot}
 \end{figure}
 
-\section{Contents of the Demo}
+\section{Contents of the Tool Demo}
 
+\pp{Introduction} We will introduce the need for language engineering in
+the same way as in the introduction above. 
+
+\pp{Example Use Case} We will then show an example from the mbeddr.com
+extensible C language \cite{mbeddr}. The project develops modular extensions of
+C to make embedded software development more productive. The project
+demonstrates an intriguing use case fo language extension and showcases
+syntactic forms other than text, such as the decision table shown in
+\fig{screenshot}.
+
+\pp{Creating Extensions} The main part of the demo will consist of a demo of howto build a lanugage extension,
 
 \section{What the audience will take away}
+
+
 
 % For peer review papers, you can put extra information on the cover
 % page as needed:
@@ -110,9 +126,6 @@ element being aware of the annotation.}
 
 
 
-
-\section{Conclusion}
-The conclusion goes here. this is more of the conclusion
 
 % conference papers do not normally have an appendix
 
@@ -147,13 +160,12 @@ more thanks here
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+% \nocite{*} 
+\bibliographystyle{abbrv} 
+\bibliography{tooldemo}
 
-\end{thebibliography}
+
 
 
 
