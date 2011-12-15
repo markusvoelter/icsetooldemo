@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.30)  15 DEC 2011 08:57
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.30)  15 DEC 2011 09:44
 entering extended mode
 **doc.tex
 (C:\data\eigen\projekte\privat\presentations\icse\icse2012\toolDemo\doc.tex
@@ -127,13 +127,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 66.
+(Font)              <9> on input line 134.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 66.
+(Font)              <6> on input line 134.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 207.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 207.
+(Font)              <5> on input line 134.
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -148,24 +146,23 @@ Before submitting the final camera ready copy, remember to:
 [1{C:/Users/Markus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-
 ]
 (C:\data\eigen\projekte\privat\presentations\icse\icse2012\toolDemo\doc.aux) ) 
 Here is how much of TeX's memory you used:
- 929 strings out of 494019
- 16519 string characters out of 3141698
- 65950 words of memory out of 3000000
- 4279 multiletter control sequences out of 15000+200000
- 39276 words of font info for 73 fonts, out of 3000000 for 9000
+ 927 strings out of 494019
+ 16499 string characters out of 3141698
+ 66950 words of memory out of 3000000
+ 4278 multiletter control sequences out of 15000+200000
+ 38198 words of font info for 72 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
- 26i,8n,19p,392b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,8n,19p,184b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
 {
 C:/data/javadev/commonTools/miktex-2.9/fonts/enc/dvips/fontname/8r.enc}<C:/data
 /javadev/commonTools/miktex-2.9/fonts/type1/urw/times/utmb8a.pfb><C:/data/javad
 ev/commonTools/miktex-2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/data/javadev/co
 mmonTools/miktex-2.9/fonts/type1/urw/times/utmr8a.pfb><C:/data/javadev/commonTo
 ols/miktex-2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doc.pdf (1 page, 56963 bytes).
+Output written on doc.pdf (1 page, 54798 bytes).
 PDF statistics:
  23 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
