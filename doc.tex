@@ -3,6 +3,7 @@
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+\usepackage[pdftex]{graphicx}
 
 \begin{document}
 %
@@ -48,6 +49,8 @@ language engineering, language extension, language composition
 \end{IEEEkeywords}
 
 \section{Introduction and Motivation}
+
+\noindent
 Finding and working with the right abstractions for describing a
 problem or its solution is one of the central pillars of software engineering.Once the right abstractions have been found, things can be expressed more
 concisely, are easier to understand, the description can be analysed and other
@@ -70,8 +73,25 @@ as system.
 
 \section{How MPS Works}
 
-MPS is a projectional editor. 
+\noindent
+MPS is a projectional editor. This means that a wide variety of syntactic forms
+are supported including textual, symbolic (e.g. mathematical), tabular and, in
+the upcoming version 3.0, graphical. Even for textual notations, no grammar or
+parser is used, which means that language composition cannot lead to ambiguous
+grammars --- ambiguities have to be resolved by the user when entering a
+program. IDE support is provided for all notations. While projectional (aka
+structural) editors have had a bad reputation traditionally, MPS has managed to
+make the editing experience very much like traditional text editing.
+ 
 
+\begin{figure}[h]  
+\includegraphics[width=8.6cm]{figures/screenshot.png}
+\caption{An example of a program written with MPS. It mixed C functions,
+state machines and decision tables, each of them defined as a separate
+language. The screenshot also shows requirements traces (green annotations),
+which can be attached to any program element without the definition of this
+element being aware of the annotation.}
+\end{figure}
 
 \section{Contents of the Demo}
 

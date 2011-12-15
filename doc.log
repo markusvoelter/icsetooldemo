@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.30)  15 DEC 2011 09:44
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2011.11.30)  15 DEC 2011 10:04
 entering extended mode
 **doc.tex
 (C:\data\eigen\projekte\privat\presentations\icse\icse2012\toolDemo\doc.tex
@@ -99,26 +99,65 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEtmpitemindent=\dimen116
 \c@IEEEbiography=\count90
 \@IEEEtranrubishbin=\box26
-) (C:\data\eigen\projekte\privat\presentations\icse\icse2012\toolDemo\doc.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+) (C:\data\javadev\commonTools\miktex-2.9\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\data\javadev\commonTools\miktex-2.9\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\data\javadev\commonTools\miktex-2.9\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\data\javadev\commonTools\miktex-2.9\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\data\javadev\commonTools\miktex-2.9\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(C:\data\javadev\commonTools\miktex-2.9\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2010/09/14 v0.05b Graphics/color for pdfTeX
+\Gread@gobject=\count91
+))
+\Gin@req@height=\dimen117
+\Gin@req@width=\dimen118
+)
+(C:\data\eigen\projekte\privat\presentations\icse\icse2012\toolDemo\doc.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+(C:\Users\Markus\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen119
+\scratchbox=\box27
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen120
+\MPnumerator=\count96
+\everyMPtoPDFconversion=\toks17
+)
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 35.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 36.
 
 ! Undefined control sequence.
 \todo #1->\mynote 
                   {TODO}{#1}
-l.43 session, we will \todo{}
+l.44 session, we will \todo{}
                              
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -126,12 +165,23 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+<figures/screenshot.png, id=1, 697.60625pt x 327.2225pt>
+File: figures/screenshot.png Graphic file (type png)
+
+<use figures/screenshot.png>
+Overfull \hbox (0.78261pt too wide) in paragraph at lines 89--94
+[][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 134.
+(Font)              <9> on input line 154.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 134.
+(Font)              <6> on input line 154.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 134.
+(Font)              <5> on input line 154.
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -146,25 +196,26 @@ Before submitting the final camera ready copy, remember to:
 [1{C:/Users/Markus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-]
+ <C:/data/eigen/projekte/privat/presentations/icse/icse2012/toolDemo/figures/sc
+reenshot.png>]
 (C:\data\eigen\projekte\privat\presentations\icse\icse2012\toolDemo\doc.aux) ) 
 Here is how much of TeX's memory you used:
- 927 strings out of 494019
- 16499 string characters out of 3141698
- 66950 words of memory out of 3000000
- 4278 multiletter control sequences out of 15000+200000
+ 1664 strings out of 494019
+ 26378 string characters out of 3141698
+ 81367 words of memory out of 3000000
+ 4987 multiletter control sequences out of 15000+200000
  38198 words of font info for 72 fonts, out of 3000000 for 9000
  717 hyphenation exceptions out of 8191
- 26i,8n,19p,184b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,8n,21p,434b,295s stack positions out of 5000i,500n,10000p,200000b,50000s
 {
 C:/data/javadev/commonTools/miktex-2.9/fonts/enc/dvips/fontname/8r.enc}<C:/data
 /javadev/commonTools/miktex-2.9/fonts/type1/urw/times/utmb8a.pfb><C:/data/javad
 ev/commonTools/miktex-2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/data/javadev/co
 mmonTools/miktex-2.9/fonts/type1/urw/times/utmr8a.pfb><C:/data/javadev/commonTo
 ols/miktex-2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on doc.pdf (1 page, 54798 bytes).
+Output written on doc.pdf (1 page, 74873 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 26 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
