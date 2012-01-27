@@ -5,13 +5,21 @@
 
 \usepackage[pdftex]{graphicx}
 
+\usepackage{amssymb}
+\usepackage{soul}  
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8]{inputenc} 
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+  
 \begin{document}
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
 \title{Tool Demo: The MPS Language Workbench}
 
-
+ 
 % author names and affiliations
 % use a multiple column layout for up to two different
 % affiliations
@@ -24,6 +32,8 @@ voelter@itemis.de}
 \IEEEauthorblockA{JetBrains\\
 vaclav.pech@jetbrains.com}
 }
+
+\newcommand{\changefont}[3]{\fontfamily{#1}\fontseries{#2}\fontshape{#3}\selectfont}
 
 \newcommand\todo[1]{\mynote{TODO}{#1}} 
 \newcommand{\fig}[1]{Fig.~\ref{#1}}
@@ -39,11 +49,12 @@ vaclav.pech@jetbrains.com}
 
 
 \begin{abstract}
-The JetBrains MPS is a comprehensive environment for language engineering.
+JetBrains MPS is a comprehensive environment for language engineering.
 New languages can be defined as standalone languages or as modular extensions of
 existing languages. Since MPS is a projectional editor, syntactic forms other
-than text are possible, including tables or mathematical symbols. In this
-session, we will \todo{}
+than text are possible, including tables or mathematical symbols. This
+demo will show MPS based on mbeddr C, a novel approach for embedded software
+development that makes use of incremental language extension on the basis of C.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -54,7 +65,7 @@ language engineering, language extension, language composition
 
 \noindent
 Finding and working with the right abstractions for describing a
-problem or its solution is one of the central pillars of software engineering.Once the right abstractions have been found, things can be expressed more
+problem or its solution is one of the central pillars of software engineering.Once the right abstractions have been found, programs can be expressed more
 concisely, are easier to understand, the description can be analysed and other
 artifacts can be synthesized. A language is the purest form of abstraction,
 adding a suitable concrete syntax to work with the abstractions effectively. An
@@ -64,7 +75,7 @@ productive.
 
 Many software systems are composed from several concerns, each of them expressed
 with its own set of abstraction, possibly by different people, some of them may
-not even be programmers. So, to describe a real-world system, ideally several
+not even be programmers. To describe a real-world system well, several
 languages are necessary.
 
 Looking at software engineering in this light, an environment is needed in
@@ -73,23 +84,33 @@ syntax is very flexible to encompass the needs of all the stakeholders involved
 in the software system. The JetBrains MPS open source language workbench is such
 as system.
 
-\section{How MPS Works}
-
-\noindent
-MPS is a projectional editor. This means that a wide variety of syntactic forms
-are supported including textual, symbolic (e.g. mathematical), tabular and, in
-the upcoming version 3.0, graphical. Even for textual notations, no grammar or
-parser is used, which means that language composition cannot lead to ambiguous
-grammars --- ambiguities have to be resolved by the user when entering a
-program. IDE support is provided for all notations. While projectional (aka
-structural) editors have had a bad reputation traditionally, MPS has managed to
-make the editing experience very much like traditional text editing.
+\section{About MPS}
  
+\noindent MPS\footnote{http://jetbrains.com/mps} is an open source language
+workbench, developed by JetBrains and licensed under Apache 2.0. MPS is a
+projectional editor. This means that a wide variety of syntactic forms are supported including textual, symbolic (e.g.
+mathematical), tabular and, in the upcoming version 3.0, graphical (see the
+decision table in \fig{screenshot}). Even for textual notations, no grammar or
+parser is used, which means that language composition cannot lead to ambiguous grammars --- ambiguities have to be
+resolved by the user when entering a program. IDE support is provided for all
+notations. While projectional (aka structural) editors have had a bad reputation
+traditionally, MPS has managed to make the editing experience very much like
+traditional text editing.
+ \section{About mbeddr C}
+
+\noindent mbeddr C\footnote{http://mbeddr.com} is an extensible version of the C
+programming language implemented in MPS. It is open source under the Eclipse Public License and can
+be found at \ic{http://mbeddr.com}. Development teams can build their own
+domain-specific extensions of C to increase productivity and reliability in embedded software development. mbeddr C comes with a couple of reusable extensions such as
+interfaces, components, unit test support and state machines. It also integrates
+model checking and SAT solving to support formal verification of software
+systems. By extending programming languages with suitable abstractions,
+verification becomes significantly simpler.  
 
 \begin{figure}[h]  
 \includegraphics[width=8.6cm]{figures/screenshot.png}
-\caption{An example of a program written with MPS. It mixed C functions,
-state machines and decision tables, each of them defined as a separate
+\caption{An example of a program written with mbeddr C in MPS. It mixed C
+functions, state machines and decision tables, each of them defined as a separate
 language. The screenshot also shows requirements traces (green annotations),
 which can be attached to any program element without the definition of this
 element being aware of the annotation.}
@@ -102,17 +123,39 @@ element being aware of the annotation.}
 the same way as in the introduction above. 
 
 \pp{Example Use Case} We will then show an example from the mbeddr.com
-extensible C language \cite{mbeddr}. The project develops modular extensions of
+extensible C language. The project develops modular extensions of
 C to make embedded software development more productive. The project
 demonstrates an intriguing use case fo language extension and showcases
-syntactic forms other than text, such as the decision table shown in
-\fig{screenshot}.
+syntactic forms other than text, such as the decision table shown in.
 
-\pp{Creating Extensions} The main part of the demo will consist of a demo of howto build a lanugage extension,
+\pp{Creating Extensions} The main part of the demo will consist of a demo of howto build a language extension. Depending on the time we have in the tool demo,we will build the Hello World of language extensions, the \ic{unless} statement.It is basically a negated \ic{if}. This extension involves the following steps:
+
+\begin{itemize}
+  \item Defining a new language that extends C so we can "plug into" C's
+  statements
+  \item Defining a new concept \ic{UnlessStatement} that extends C's
+  \ic{Statement} and has an \ic{Expression} and a \ic{StatementList} as children
+  \item Creating an editor that projects the \ic{UnlessStatement} in the same
+  way as the \ic{if}, with the keyword \ic{unless} instead
+  \item Defining a type system equation that ensures the expression in the
+  \ic{UnlessStatement} is Boolean
+  \item Implementing a generator that maps the \ic{unless} back to an \ic{if}
+  with a negated condition, so it can be compiled with a regular C compiler
+  \item And finally, a quick fix that allows the in place transformation of
+  existing \ic{if} statements to an \ic{unless} (if they don't have \ic{else
+  if} or \ic{else} clauses).
+\end{itemize}
+This language extension shows most of the essential ingredients to language
+definition in MPS.
 
 \section{What the audience will take away}
+The audience will understand the benefits of language extension. They will
+realize that, with the right tools, the efforts for defining extensions is
+limited, and can be done as part of real-world software development projects.
 
-
+\section{Further Reading}
+More details about the mbeddr approach and the capabilities of MPS can be found
+in the technical report at \ic{http://bit.ly/wIYERh}.
 
 % For peer review papers, you can put extra information on the cover
 % page as needed:
@@ -130,12 +173,7 @@ syntactic forms other than text, such as the decision table shown in
 % conference papers do not normally have an appendix
 
 
-% use section* for acknowledgement
-\section*{Acknowledgment}
 
-
-The authors would like to thank...
-more thanks here
 
 
 % trigger a \newpage just before the given reference
@@ -160,10 +198,6 @@ more thanks here
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-
-% \nocite{*} 
-\bibliographystyle{abbrv} 
-\bibliography{tooldemo}
 
 
 
