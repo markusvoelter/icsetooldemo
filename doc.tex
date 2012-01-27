@@ -50,10 +50,10 @@ vaclav.pech@jetbrains.com}
 
 \begin{abstract}
 JetBrains MPS is a comprehensive environment for language engineering.
-New languages can be defined as standalone languages or as modular extensions of
-existing languages. Since MPS is a projectional editor, syntactic forms other
+It allows new languages to be defined either as standalone languages or as modular extensions of
+already existing ones. Since MPS is based on using a projectional editor, syntactic forms other
 than text are possible, including tables or mathematical symbols. This
-demo will show MPS based on mbeddr C, a novel approach for embedded software
+demo will show MPS in the context of mbeddr C, a novel approach for embedded software
 development that makes use of incremental language extension on the basis of C.
 \end{abstract}
 
@@ -65,29 +65,28 @@ language engineering, language extension, language composition
 
 \noindent
 Finding and working with the right abstractions for describing a
-problem or its solution is one of the central pillars of software engineering.Once the right abstractions have been found, programs can be expressed more
-concisely, are easier to understand, the description can be analysed and other
-artifacts can be synthesized. A language is the purest form of abstraction,
-adding a suitable concrete syntax to work with the abstractions effectively. An
+problem or its solution is one of the central pillars of software engineering. Once the right abstractions have been found, programs can be expressed more
+concisely. They are easier to understand, the description can be analysed with tools and other
+artifacts can be synthesized. A language is the purest form of abstraction.
+It adds a suitable and convenient concrete syntax to work with the abstractions effectively. An
 IDE that supports syntax coloring, code completion, error annotation and
-refactoring makes working with the language and its abstractions even more
+refactoring makes working with the language and the underlying abstractions even more
 productive.
 
-Many software systems are composed from several concerns, each of them expressed
-with its own set of abstraction, possibly by different people, some of them may
-not even be programmers. To describe a real-world system well, several
-languages are necessary.
+Many software systems are composed of several concerns, each of which is typically expressed
+with its own set of abstractions, possibly created by different people of different skills. Some of them may
+not even be programmers. As a result we frequently need several languages to describe a single real-world system well.
 
-Looking at software engineering in this light, an environment is needed in
-which language creation is easy, languages can be composed and the concrete
-syntax is very flexible to encompass the needs of all the stakeholders involved
-in the software system. The JetBrains MPS open source language workbench is such
-as system.
+Looking at software engineering from this perspective, clearly an environment is needed that makes
+language creation easy. It should allow languages to be freely composed and the concrete
+syntax should be very flexible in order to encompass the needs of all the stakeholders involved
+in the software system. JetBrains MPS, an open source language workbench, is a good example of such
+a system.
 
 \section{About MPS}
  
 \noindent MPS\footnote{http://jetbrains.com/mps} is an open source language
-workbench, developed by JetBrains and licensed under Apache 2.0. MPS is a
+workbench, developed by JetBrains and licensed under Apache 2.0. MPS is built around the concept of a
 projectional editor. This means that a wide variety of syntactic forms are supported including textual, symbolic (e.g.
 mathematical), tabular and, in the upcoming version 3.0, graphical (see the
 decision table in \fig{screenshot}). Even for textual notations, no grammar or
@@ -96,7 +95,7 @@ resolved by the user when entering a program. IDE support is provided for all
 notations. While projectional (aka structural) editors have had a bad reputation
 traditionally, MPS has managed to make the editing experience very much like
 traditional text editing.
- \section{About mbeddr C}
+ \section{About mbeddr C}
 
 \noindent mbeddr C\footnote{http://mbeddr.com} is an extensible version of the C
 programming language implemented in MPS. It is open source under the Eclipse Public License and can
@@ -109,11 +108,11 @@ verification becomes significantly simpler.
 
 \begin{figure}[h]  
 \includegraphics[width=8.6cm]{figures/screenshot.png}
-\caption{An example of a program written with mbeddr C in MPS. It mixed C
-functions, state machines and decision tables, each of them defined as a separate
+\caption{An example of a program written with mbeddr C in MPS. It mixes C
+functions, state machines and decision tables, each of which is defined as a separate
 language. The screenshot also shows requirements traces (green annotations),
-which can be attached to any program element without the definition of this
-element being aware of the annotation.}
+which can be attached to any program element. The definition of this language
+element doesn't need to be made aware of the annotation by its creators.}
 \label{screenshot}
 \end{figure}
 
@@ -125,10 +124,10 @@ the same way as in the introduction above.
 \pp{Example Use Case} We will then show an example from the mbeddr.com
 extensible C language. The project develops modular extensions of
 C to make embedded software development more productive. The project
-demonstrates an intriguing use case fo language extension and showcases
-syntactic forms other than text, such as the decision table shown in.
+demonstrates an intriguing use case for language extension and showcases
+syntactic forms other than text, such as the decision table shown in FIGURE REFERENCE MISSING HERE.
 
-\pp{Creating Extensions} The main part of the demo will consist of a demo of howto build a language extension. Depending on the time we have in the tool demo,we will build the Hello World of language extensions, the \ic{unless} statement.It is basically a negated \ic{if}. This extension involves the following steps:
+\pp{Creating Extensions} The main part of the presentation will consist of a demo of how to build a language extension. Depending on the time we get for the tool demonstration, we will build the Hello World of language extensions, the \ic{unless} statement. It is basically a negated \ic{if}. This extension involves the following steps:
 
 \begin{itemize}
   \item Defining a new language that extends C so we can "plug into" C's
@@ -141,17 +140,18 @@ syntactic forms other than text, such as the decision table shown in.
   \ic{UnlessStatement} is Boolean
   \item Implementing a generator that maps the \ic{unless} back to an \ic{if}
   with a negated condition, so it can be compiled with a regular C compiler
+  \item Defining dataflow so that MPS can detect problems such as unreachable statements or potential null references
   \item And finally, a quick fix that allows the in place transformation of
   existing \ic{if} statements to an \ic{unless} (if they don't have \ic{else
   if} or \ic{else} clauses).
-\end{itemize}
+\end{itemize}
 This language extension shows most of the essential ingredients to language
 definition in MPS.
 
 \section{What the audience will take away}
 The audience will understand the benefits of language extension. They will
 realize that, with the right tools, the efforts for defining extensions is
-limited, and can be done as part of real-world software development projects.
+not big, and can be easily acceptable for many real-world software development projects.
 
 \section{Further Reading}
 More details about the mbeddr approach and the capabilities of MPS can be found
