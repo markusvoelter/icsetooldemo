@@ -17,7 +17,8 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Tool Demo: The MPS Language Workbench}
+\title{Informal Research Demonstration: \\ Language Modularity with the MPS
+Language Workbench}
 
  
 % author names and affiliations
@@ -86,26 +87,29 @@ as system.
 
 \section{About MPS}
  
-\noindent MPS\footnote{http://jetbrains.com/mps} is an open source language
-workbench, developed by JetBrains and licensed under Apache 2.0. MPS is a
-projectional editor. This means that a wide variety of syntactic forms are supported including textual, symbolic (e.g.
-mathematical), tabular and, in the upcoming version 3.0, graphical (see the
-decision table in \fig{screenshot}). Even for textual notations, no grammar or
-parser is used, which means that language composition cannot lead to ambiguous grammars --- ambiguities have to be
-resolved by the user when entering a program. IDE support is provided for all
-notations. While projectional (aka structural) editors have had a bad reputation
+\noindent JetBrains MPS (\ic{http://jetbrains.com/mps}) is an open source
+language workbench, developed by JetBrains and licensed under Apache 2.0. MPS is
+a projectional editor. This means that a wide variety of syntactic forms are
+supported including textual, symbolic (e.g. mathematical), tabular and, in the
+upcoming version 3.0, graphical (see the decision table in \fig{screenshot}).
+IDE support is provided for all notations. Even for textual notations, no
+grammar or parser is used. So a combination of independently developed languages
+cannot become ambiguous as a consequence of the intricacies of grammar classes.
+This results in very good support for language modularity, reuse and composition
+in MPS. While projectional (aka structural) editors have had a bad reputation
 traditionally, MPS has managed to make the editing experience very much like
 traditional text editing.
- \section{About mbeddr C}
+ \section{About mbeddr C}
 
-\noindent mbeddr C\footnote{http://mbeddr.com} is an extensible version of the C
-programming language implemented in MPS. It is open source under the Eclipse Public License and can
-be found at \ic{http://mbeddr.com}. Development teams can build their own
-domain-specific extensions of C to increase productivity and reliability in embedded software development. mbeddr C comes with a couple of reusable extensions such as
-interfaces, components, unit test support and state machines. It also integrates
-model checking and SAT solving to support formal verification of software
-systems. By extending programming languages with suitable abstractions,
-verification becomes significantly simpler.  
+\noindent mbeddr C is an extensible version of the C
+programming language implemented in MPS. It is open source under the Eclipse
+Public License and can be found at \ic{http://mbeddr.com}. Development teams can
+build their own domain-specific extensions of C to increase productivity and
+reliability in embedded software development. mbeddr C comes with a couple of
+reusable extensions such as interfaces, components, unit test support and state
+machines. It also integrates model checking and SAT solving to support formal
+verification of software systems. By extending programming languages with
+suitable abstractions, verification becomes significantly simpler.
 
 \begin{figure}[h]  
 \includegraphics[width=8.6cm]{figures/screenshot.png}
@@ -122,7 +126,7 @@ element being aware of the annotation.}
 \pp{Introduction} We will introduce the need for language engineering in
 the same way as in the introduction above. 
 
-\pp{Example Use Case} We will then show an example from the mbeddr.com
+\pp{Example Use Case} We will then show an example from the mbeddr
 extensible C language. The project develops modular extensions of
 C to make embedded software development more productive. The project
 demonstrates an intriguing use case fo language extension and showcases
